@@ -14,14 +14,8 @@ public class Ejercicio1 extends GraphicsProgram{
 	
 	public void run(){
 		
-		//cambio el tamaño de la ventana
-		setSize(800,600);
-		//llamo al método que dibuja la piramide
-		pintaPiramide();
+		GLabel etiqueta = new GLabel ("HOLA GIT");
+		add(etiqueta, 120,130);
 	}
-		public void pintaPiramide(){
-			
-			
-			
-		}
+		
 }
