@@ -25,14 +25,17 @@ public class Ejercicio1 extends GraphicsProgram{
 		int anchoLadrillo = 30;
 		int altoLadrillo = 12;
 		
-		//querido yo del martes;
-		//te falta lo más facil que es girar la pirámide
-		//att: tu yo del viernes
+		int altoPiramide = numeroLadrillosBase * altoLadrillo;
+		int basePiramide = numeroLadrillosBase * anchoLadrillo;
+		//terminado y probado con varios tamaños de ladrillo
 
 		for (int j=0; j< numeroLadrillosBase; j++){
 			for (int i=0; i< numeroLadrillosBase-j; i++){
 				GRect ladrillo = new GRect (anchoLadrillo, altoLadrillo);
-				add(ladrillo, anchoLadrillo *j/2 + anchoLadrillo * i, altoLadrillo * j);
+				
+				add(ladrillo, 
+						getWidth()/2 - basePiramide/2 + anchoLadrillo *j/2 + anchoLadrillo * i,
+						getHeight() - altoLadrillo - altoLadrillo * j);
 				pause(20);
 			}
 
